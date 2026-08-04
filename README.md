@@ -43,6 +43,10 @@ and without spending a single token. `/v1/chat` will return a simulated
 response with realistic latency instead of calling OpenAI. Flip it to
 `false` (with a real key set) to hit the live API.
 
+## Tech Stack
+*Python • FastAPI • Uvicorn • Pydantic • httpx • Redis • SQLAlchemy • PostgreSQL • Docker • GitHub Actions • Pytest**
+
+
 ## Features
 
 - **`POST /v1/chat`** – proxies a chat message to OpenAI, cached and rate-limited
