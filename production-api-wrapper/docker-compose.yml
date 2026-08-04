@@ -1,0 +1,14 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      API_KEY: ${API_KEY:-changeme}
+      DATABASE_URL: sqlite:///./app.db
+      RATE_LIMIT: ${RATE_LIMIT:-10/minute}
+      ENVIRONMENT: production
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
